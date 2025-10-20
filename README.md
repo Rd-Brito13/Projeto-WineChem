@@ -1,144 +1,127 @@
-# 🧪 Projeto WineChem
-
-## 🎯 Objetivo
-
-> Este projeto tem como objetivo aplicar **técnicas de mineração de regras de associação** para identificar **padrões ocultos entre os componentes químicos presentes em diferentes tipos de vinhos**.
-
-O projeto demonstra o uso prático de **técnicas de aprendizado não supervisionado** aplicadas à **análise exploratória de dados químicos**, sendo uma abordagem útil tanto para **análises laboratoriais** quanto para **estudos de qualidade e classificação de vinhos**.
-
-📊 **Fonte dos dados:** [Wine Dataset for Clustering (Kaggle)](https://www.kaggle.com/datasets/harrywang/wine-dataset-for-clustering)
-
 ---
+Projeto: Agrupamento de Vinhos (WineChem)
 
-## 🧰 Bibliotecas Utilizadas
-
-```python
-# Análise e manipulação de dados
-import pandas as pd
-import numpy as np
-
-# Visualização de dados
-import plotly.express as px
-import seaborn as sns
-import matplotlib.pyplot as plt
-import plotly.graph_objects as go
-import scipy.stats as sts
-
-# Pré-processamento
-from sklearn.compose import ColumnTransformer
-from sklearn import preprocessing
-from sklearn.pipeline import Pipeline
-from statistics import mode
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-
-# Algoritmos de agrupamento
-from sklearn.cluster import KMeans, MeanShift, AgglomerativeClustering, DBSCAN
-from scipy.cluster.hierarchy import dendrogram, linkage
-
-# Outras abordagens
-from kmodes.kprototypes import KPrototypes
-from kmodes.kmodes import KModes
-```
-
+Este projeto aplica técnicas de Aprendizado Não Supervisionado para identificar padrões entre os componentes químicos de diferentes tipos de vinhos.
+O dataset utilizado é público e está disponível no Kaggle: Wine Dataset for Clustering
 ---
+Objetivo do projeto
 
-## 🧬 Etapas do Projeto
+Identificar padrões e agrupar vinhos com base em suas características químicas, utilizando algoritmos de clustering. As análises permitem:
 
-### 1️⃣ Importação do Dataset
-```python
-vinhos = pd.read_csv('wine-clustering.csv', sep=',', encoding='utf-8')
-vinhos.head()
-```
+Explorar relações entre os componentes químicos dos vinhos;
 
-### 2️⃣ Análise Exploratória
-- Verificação de valores nulos e tipos de dados  
-- Estatísticas descritivas das variáveis químicas  
-- Distribuições, histogramas e boxplots para análise de simetria e outliers  
+Agrupar vinhos de forma coerente com suas propriedades físico-químicas;
 
-### 3️⃣ Pré-processamento
-- Padronização das variáveis com **StandardScaler**  
-- Redução de dimensionalidade com **PCA** para análise visual e ganho de performance  
-
-### 4️⃣ Agrupamento
-Foram aplicados diferentes algoritmos de **aprendizado não supervisionado**:
-- **K-Means**  
-- **MeanShift**  
-- **Agglomerative Clustering**  
-- **DBSCAN**  
-- **KModes / KPrototypes**  
-
-Os modelos foram avaliados visualmente e com base na separabilidade dos clusters gerados.
-
-### 5️⃣ Visualização dos Resultados
-Gráficos em 2D e 3D foram utilizados para visualizar os agrupamentos após a aplicação do PCA, mostrando a separação dos tipos de vinho de acordo com suas características químicas.
-
+Demonstrar o uso prático de algoritmos de clustering e técnicas de redução de dimensionalidade.
 ---
-
-## 📈 Resultados
-
-O projeto permitiu:
-- **Identificar padrões** entre os componentes químicos dos vinhos;  
-- **Agrupar vinhos** de forma coerente com suas propriedades físico-químicas;  
-- **Demonstrar o uso prático** de algoritmos de clustering e redução de dimensionalidade em um contexto real.  
-
----
-
-## 🧠 Tecnologias Envolvidas
-- **Python 3.x**  
-- **Scikit-learn**  
-- **Pandas / NumPy**  
-- **Matplotlib / Seaborn / Plotly**  
-- **SciPy**  
-- **KModes**
-
----
-
-## 📂 Estrutura do Projeto
-```
+Estrutura do projeto
 Agrupamento_Vinhos/
 ├─ data/
-
-│ └─ raw/ <- wine-clustering.csv
-
+│  └─ raw/ <- wine-clustering.csv
 ├─ notebooks/
-
-│ └─ Agrupamento_Vinho.ipynb <- Análise, tratamento e modelagem
-
+│  └─ Agrupamento_Vinho.ipynb <- Análise, tratamento e modelagem
 ├─ requirements/
-
-│  └─requirements.txt <- Dependências do projeto
-
+│  └─ requirements.txt <- Dependências do projeto
 ├─ Setup.bat <- Script para criar venv, instalar dependências e kernel Jupyter
-
 └─ README.md <- Documentação do projeto
-```
+---
+Dataset
+
+Fonte: Kaggle - Wine Dataset for Clustering
+
+Número de instâncias: 178
+
+Número de features: 13 (composição química de cada vinho)
 
 ---
 
-##  Como Executar o Projeto
+Pipeline do projeto
+1. Importação dos dados
+vinhos = pd.read_csv('wine-clustering.csv', sep=',', encoding='utf-8')
+vinhos.head()
 
-## Obs: Para rodar no google colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+---
+2. Exploração e pré-processamento
 
+Verificação de valores nulos e tipos de dados
+
+Estatísticas descritivas
+
+Análise de distribuições, histogramas e boxplots
+
+Padronização das variáveis com StandardScaler
+
+Redução de dimensionalidade com PCA para análise visual e ganho de performance
+---
+
+3. Agrupamento
+
+Foram aplicados diferentes algoritmos de clustering:
+
+K-Means
+
+MeanShift
+
+Agglomerative Clustering
+
+DBSCAN
+
+KModes / KPrototypes
+
+Os modelos foram avaliados visualmente e pela separabilidade dos clusters gerados.
+---
+4. Visualização dos resultados
+
+Gráficos em 2D e 3D após PCA
+
+Comparação entre clusters e tipos de vinho
+---
+Resultados
+
+Padrões identificados entre os componentes químicos dos vinhos
+
+Agrupamentos coerentes com propriedades físico-químicas
+
+Demonstração prática de clustering e redução de dimensionalidade
+---
+Tecnologias envolvidas
+
+Python 3.x
+
+Pandas / NumPy
+
+Matplotlib / Seaborn / Plotly
+
+Scikit-learn
+
+SciPy
+
+KModes
+---
+Como executar o projeto
+---
+Obs: Para rodar no Google Colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+---
+Utilizando o Jupyter (Opção 1)
+
+Clone o repositório:
 ```bash
+git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
-1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
+Execute o script Setup.bat
+(Ele criará o venv, instalará as dependências e registrará o kernel no Jupyter)
 
-2. Execute o script Setup.bat (ele fará tudo: criar o venv na pasta do projeto, instalar dependências e registrar o kernel no jupyter)
+Abra o notebook no Jupyter e selecione o kernel criado:
+Kernel -> Change Kernel -> Python (WineChem)
 
-3. Abra o notebok no jupyter e selecione o kernel criado: Kernel -> change kernel -> Phyton (WineChem)
-
-4. Abra o notebook no jupyter e execute.
-   ```
-
+Execute as células do notebook para reproduzir a análise.
+```
 ---
-
-## 👨‍💻 Autor
-
-**Rodrigo Brito**  
-📧 [rd.brito13@gmail.com](mailto:rd.brito13@gmail.com)  
-💼 [LinkedIn](https://www.linkedin.com/in/rd-brito13)
-
+Autor
 ---
+Rodrigo Brito
+📧 rd.brito13@gmail.com
 
-⭐ **Se este projeto foi útil, não esqueça de deixar uma estrela no repositório!**
+💼 LinkedIn
+---
+⭐ Se este projeto foi útil, não esqueça de deixar uma estrela no repositório!
