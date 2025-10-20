@@ -2,7 +2,7 @@
 ## Projeto: Agrupamento de Vinhos (WineChem)
 
 Este projeto aplica técnicas de Aprendizado Não Supervisionado para identificar padrões entre os componentes químicos de diferentes tipos de vinhos.
-O dataset utilizado é público e está disponível no Kaggle: Wine Dataset for Clustering.
+O dataset utilizado é público e está disponível no Kaggle: [Wine Dataset for Clustering.](https://www.kaggle.com/datasets/harrywang/wine-dataset-for-clustering)
 
 ---
 ## Objetivo do projeto
@@ -50,6 +50,7 @@ Número de features: 13 (composição química de cada vinho)
 ## Pipeline do projeto
 
 1. Importação dos dados
+
 vinhos = pd.read_csv('wine-clustering.csv', sep=',', encoding='utf-8')
 vinhos.head()
 
