@@ -118,13 +118,11 @@ Agrupamento_Vinhos/
 
 ## 🚀 Como Executar o Projeto
 
-1.git clone https://github.com/Rd-Brito13/Projeto-WineChem
+1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
 2. Execute o script Setup.bat (ele fará tudo: criar o venv na pasta do projeto, instalar dependências e registrar o kernel no jupyter)
 
-3. Abra o notebok no jupyter e selecione o kernel criado:
-
-Kernel -> change kernel -> Phyton (WineChem)
+3. Abra o notebok no jupyter e selecione o kernel criado: Kernel -> change kernel -> Phyton (WineChem)
 
 4. Abra o notebook no jupyter e execute.
    ```
