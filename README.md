@@ -118,7 +118,9 @@ Agrupamento_Vinhos/
 
 ##  Como Executar o Projeto
 
-Obs: Para rodar no google colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+## Obs: Para rodar no google colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+
+```bash
 
 1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
