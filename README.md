@@ -123,16 +123,17 @@ KModes
 
 ---
 
-##Como executar o projeto
+## Como executar o projeto
 
 ---
 
-##Obs: Para rodar no Google Colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+## Obs: Para rodar no Google Colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
 
 ---
 Utilizando o Jupyter (Opção 1)
 
 Clone o repositório:
+
 ```bash
 1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
@@ -152,6 +153,6 @@ Rodrigo Brito
 
 📧 rd.brito13@gmail.com
 
-💼 LinkedIn: https://www.linkedin.com/in/rodrigo-brito-a4393a277/
+💼 LinkedIn
 ---
 ⭐ Se este projeto foi útil, não esqueça de deixar uma estrela no repositório!
