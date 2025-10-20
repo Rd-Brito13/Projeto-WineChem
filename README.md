@@ -15,14 +15,23 @@ Agrupar vinhos de forma coerente com suas propriedades físico-químicas;
 Demonstrar o uso prático de algoritmos de clustering e técnicas de redução de dimensionalidade.
 ---
 Estrutura do projeto
+
 Agrupamento_Vinhos/
+
 ├─ data/
+
 │  └─ raw/ <- wine-clustering.csv
+
 ├─ notebooks/
+
 │  └─ Agrupamento_Vinho.ipynb <- Análise, tratamento e modelagem
+
 ├─ requirements/
+
 │  └─ requirements.txt <- Dependências do projeto
+
 ├─ Setup.bat <- Script para criar venv, instalar dependências e kernel Jupyter
+
 └─ README.md <- Documentação do projeto
 ---
 Dataset
