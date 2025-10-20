@@ -54,6 +54,7 @@ vinhos = pd.read_csv('wine-clustering.csv', sep=',', encoding='utf-8')
 vinhos.head()
 
 ---
+
 2. Exploração e pré-processamento
 
 Verificação de valores nulos e tipos de dados
@@ -67,6 +68,7 @@ Padronização das variáveis com StandardScaler
 Redução de dimensionalidade com PCA para análise visual e ganho de performance
 
 ---
+
 
 3. Agrupamento
 
@@ -85,6 +87,8 @@ KModes / KPrototypes
 Os modelos foram avaliados visualmente e pela separabilidade dos clusters gerados.
 
 ---
+
+
 4. Visualização dos resultados
 
 Gráficos em 2D e 3D após PCA
@@ -92,6 +96,7 @@ Gráficos em 2D e 3D após PCA
 Comparação entre clusters e tipos de vinho
 
 ---
+
 ## Resultados
 
 Padrões identificados entre os componentes químicos dos vinhos
@@ -101,6 +106,7 @@ Agrupamentos coerentes com propriedades físico-químicas
 Demonstração prática de clustering e redução de dimensionalidade
 
 ---
+
 ## Tecnologias envolvidas
 
 Python 3.x
@@ -128,25 +134,24 @@ Utilizando o Jupyter (Opção 1)
 
 Clone o repositório:
 ```bash
-git clone https://github.com/Rd-Brito13/Projeto-WineChem
+1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
-Execute o script Setup.bat
-(Ele criará o venv, instalará as dependências e registrará o kernel no Jupyter)
+2. Execute o script Setup.bat: (Ele criará o venv, instalará as dependências e registrará o kernel no Jupyter)
 
-Abra o notebook no Jupyter e selecione o kernel criado:
-Kernel -> Change Kernel -> Python (WineChem)
+3. Abra o notebook no Jupyter e selecione o kernel criado: Kernel -> Change Kernel -> Python (WineChem)
 
-Execute as células do notebook para reproduzir a análise.
+4. Execute as células do notebook para reproduzir a análise.
 ```
+
 ---
 
-Autor
+## Autor
 
 ---
 Rodrigo Brito
 
 📧 rd.brito13@gmail.com
 
-💼 LinkedIn
+💼 LinkedIn: https://www.linkedin.com/in/rodrigo-brito-a4393a277/
 ---
 ⭐ Se este projeto foi útil, não esqueça de deixar uma estrela no repositório!
