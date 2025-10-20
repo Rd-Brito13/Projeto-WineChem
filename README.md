@@ -70,7 +70,6 @@ Redução de dimensionalidade com PCA para análise visual e ganho de performanc
 
 ---
 
-
 3. Agrupamento
 
 Foram aplicados diferentes algoritmos de clustering:
@@ -88,7 +87,6 @@ KModes / KPrototypes
 Os modelos foram avaliados visualmente e pela separabilidade dos clusters gerados.
 
 ---
-
 
 4. Visualização dos resultados
 
@@ -150,10 +148,10 @@ Clone o repositório:
 ## Autor
 
 ---
-Rodrigo Brito
+**Rodrigo Brito**
 
-📧 rd.brito13@gmail.com
+📧 [rd.brito13@gmail.com](mailto:rd.brito13@gmail.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/rd-brito13)
 
-💼 LinkedIn
 ---
 ⭐ Se este projeto foi útil, não esqueça de deixar uma estrela no repositório!
