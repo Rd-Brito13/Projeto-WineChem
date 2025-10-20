@@ -1,10 +1,11 @@
----
-Projeto: Agrupamento de Vinhos (WineChem)
+
+## Projeto: Agrupamento de Vinhos (WineChem)
 
 Este projeto aplica técnicas de Aprendizado Não Supervisionado para identificar padrões entre os componentes químicos de diferentes tipos de vinhos.
-O dataset utilizado é público e está disponível no Kaggle: Wine Dataset for Clustering
+O dataset utilizado é público e está disponível no Kaggle: Wine Dataset for Clustering.
+
 ---
-Objetivo do projeto
+## Objetivo do projeto
 
 Identificar padrões e agrupar vinhos com base em suas características químicas, utilizando algoritmos de clustering. As análises permitem:
 
@@ -13,8 +14,9 @@ Explorar relações entre os componentes químicos dos vinhos;
 Agrupar vinhos de forma coerente com suas propriedades físico-químicas;
 
 Demonstrar o uso prático de algoritmos de clustering e técnicas de redução de dimensionalidade.
+
 ---
-Estrutura do projeto
+## Estrutura do projeto
 
 Agrupamento_Vinhos/
 
@@ -33,8 +35,9 @@ Agrupamento_Vinhos/
 ├─ Setup.bat <- Script para criar venv, instalar dependências e kernel Jupyter
 
 └─ README.md <- Documentação do projeto
+
 ---
-Dataset
+## Dataset
 
 Fonte: Kaggle - Wine Dataset for Clustering
 
@@ -44,7 +47,8 @@ Número de features: 13 (composição química de cada vinho)
 
 ---
 
-Pipeline do projeto
+## Pipeline do projeto
+
 1. Importação dos dados
 vinhos = pd.read_csv('wine-clustering.csv', sep=',', encoding='utf-8')
 vinhos.head()
@@ -61,6 +65,7 @@ Análise de distribuições, histogramas e boxplots
 Padronização das variáveis com StandardScaler
 
 Redução de dimensionalidade com PCA para análise visual e ganho de performance
+
 ---
 
 3. Agrupamento
@@ -78,22 +83,25 @@ DBSCAN
 KModes / KPrototypes
 
 Os modelos foram avaliados visualmente e pela separabilidade dos clusters gerados.
+
 ---
 4. Visualização dos resultados
 
 Gráficos em 2D e 3D após PCA
 
 Comparação entre clusters e tipos de vinho
+
 ---
-Resultados
+## Resultados
 
 Padrões identificados entre os componentes químicos dos vinhos
 
 Agrupamentos coerentes com propriedades físico-químicas
 
 Demonstração prática de clustering e redução de dimensionalidade
+
 ---
-Tecnologias envolvidas
+## Tecnologias envolvidas
 
 Python 3.x
 
@@ -106,10 +114,15 @@ Scikit-learn
 SciPy
 
 KModes
+
 ---
-Como executar o projeto
+
+##Como executar o projeto
+
 ---
-Obs: Para rodar no Google Colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+
+##Obs: Para rodar no Google Colab, carregue o notebook e o dataset e ajuste o caminho se necessário.
+
 ---
 Utilizando o Jupyter (Opção 1)
 
@@ -126,9 +139,12 @@ Kernel -> Change Kernel -> Python (WineChem)
 Execute as células do notebook para reproduzir a análise.
 ```
 ---
+
 Autor
+
 ---
 Rodrigo Brito
+
 📧 rd.brito13@gmail.com
 
 💼 LinkedIn
