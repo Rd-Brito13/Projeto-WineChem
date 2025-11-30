@@ -28,7 +28,7 @@ pip install ipykernel
 
 :: 6. Criar kernel Jupyter sem abrir notebook
 echo Registrando kernel do Jupyter...
-python -m ipykernel install --user --name=WineChem --display-name "Python (WineChem)"
+python -m ipykernel install --user --name=WineChem --display-name "Python (WineChem-)"
 
 echo ============================================
 echo   Setup concluido!
