@@ -42,15 +42,15 @@ Agrupamento_Vinhos/
 ## Descrição do Dataset
 - 178 amostras
 - 13 variáveis químicas, incluindo:
- - Álcool
- - Ácido Málico
- - Cinzas
- - Magnésio
- - Flavonoides
- - Proantocianinas
- - Fenóis totais
- - Intensidade e tonalidade da cor
- - Entre outras
+  - Álcool
+  - Ácido Málico
+  - Cinzas
+  - Magnésio
+  - Flavonoides
+  - Proantocianinas
+  - Fenóis totais
+  - Intensidade e tonalidade da cor
+  - Entre outras
 As festures passsaram por padronização com StandardScaler e/ou PCA, antes da modelagem 
 
 ---
@@ -99,8 +99,8 @@ DBSCAN
   
 MeanShift
 - Busca por:
- - Bandwidth (via linspace)
- - bin_seeding
+  - Bandwidth (via linspace)
+  - bin_seeding
 - Avaliação com e sem PCA
 - Comparação entre quantidade de clusters, estabilidade e métricas     
 
