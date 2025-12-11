@@ -1,19 +1,21 @@
 
-## Projeto: Agrupamento de Vinhos (WineChem)
+## Projeto: WineChem -  Agrupamento e Análise Química de Vinhos
 
-Este projeto aplica técnicas de Aprendizado Não Supervisionado para identificar padrões entre os componentes químicos de diferentes tipos de vinhos.
-O dataset utilizado é público e está disponível no Kaggle: [Wine Dataset for Clustering.](https://www.kaggle.com/datasets/harrywang/wine-dataset-for-clustering)
+Este projeto aplica ténicas avançadas de apredizado Não supervisionado para identificar padrões entre os componentes químicos de diferentes vinhos.
+O objetivo é explorar e agrupar amostras com caractéricas semelhantes, avaliando algortimos de clustering tradicionais e baseados em estimação de kernel.
+Dataset utilizado:
+Kaggle - Wine Dataset for Clustering
+https://www.kaggle.com/datasets/harrywang/wine-dataset-for-clustering
 
 ---
 ## Objetivo do projeto
-
-Identificar padrões e agrupar vinhos com base em suas características químicas, utilizando algoritmos de clustering. As análises permitem:
-
-Explorar relações entre os componentes químicos dos vinhos;
-
-Agrupar vinhos de forma coerente com suas propriedades físico-químicas;
-
-Demonstrar o uso prático de algoritmos de clustering e técnicas de redução de dimensionalidade.
+O estudo visa:
+- Identificar padrões químicos entre os vinhos
+- Agrupar amostras em segmentos significativos
+- Avaliar diferentes algortimos de clustering
+- Utilizar métricas estatísticas para comparações objetivas
+- Aplicar PCA para redução de dimensionalidade e análise visual
+- Compreender como parâmetros influenciam a formação dos clusters
 
 ---
 ## Estrutura do projeto
@@ -37,13 +39,19 @@ Agrupamento_Vinhos/
 └─ README.md <- Documentação do projeto
 
 ---
-## Dataset
-
-Fonte: Kaggle - Wine Dataset for Clustering
-
-Número de instâncias: 178
-
-Número de features: 13 (composição química de cada vinho)
+## Descrição do Dataset
+- 178 amostras
+- 13 variáveis químicas, incluindo:
+ - Álcool
+ - Ácido Málico
+ - Cinzas
+ - Magnésio
+ - Flavonoides
+ - Proantocianinas
+ - Fenóis totais
+ - Intensidade e tonalidade da cor
+ - Entre outras
+As festures passsaram por padronização com StandardScaler e/ou PCA, antes da modelagem 
 
 ---
 
@@ -58,51 +66,88 @@ vinhos.head()
 
 2. Exploração e pré-processamento
 
-Verificação de valores nulos e tipos de dados
-
-Estatísticas descritivas
-
-Análise de distribuições, histogramas e boxplots
-
-Padronização das variáveis com StandardScaler
-
-Redução de dimensionalidade com PCA para análise visual e ganho de performance
+- Tratamento e inspeção de nulos
+- Estatística Descritivas
+- Histogramas, boxplots, scatterplots
+- Padronização com StandarScaler
+- Redução opcional com PCA (2 componententes principais)
 
 ---
 
-3. Agrupamento
+3. Algortimos de Agrupamento Aplicados
 
-Foram aplicados diferentes algoritmos de clustering:
-
-K-Means
-
+K-Means:
+- Testes com k variando de 2 a 10
+- Avaliação por:
+ - Silhouette Score
+ - Clinski-Harabasz
+ - Davies-Bouldin
+ - Elbow Method
+- Avaliação com e sem PCA
+  
+Aglomerative Clustering (Hierárquico)
+- Avaliação com dendograma
+- Silhouette e análise visual
+- Avaliação com e sem PCA
+  
+DBSCAN
+- Busca por:
+  - eps
+  - min_samples
+- Métricas e mapas de densidade
+- Avaliação com e sem PCA
+  
 MeanShift
+- Busca por:
+ - Bandwidth (via linspace)
+ - bin_seeding
+- Avaliação com e sem PCA
+- Comparação entre quantidade de clusters, estabilidade e métricas     
 
-Agglomerative Clustering
+---
+
+4. Definição do Número de Clusters
+Como diferentes algortimos exigem diferentes abordagens, esta etapa foi divida em subseçãoes:
+
+K-Means e Hierárquico
+- Elbow method
+- Silhouette Score
+- Dendograma (Hierárquico)
+- Análise com e sem PCA 
 
 DBSCAN
+- "Elbow do DBSCAN": curva k-distance
+- Análise visual de densidade
+- Métricas de clusterização
+- Análise com e sem PCA 
 
-KModes / KPrototypes
+MeanShift
+- Varredura do bandwidth
+- Avaliação combinanda por:
+  - Silhouette
+  - Calinski
+  - Davies-Bouldin
+  - Separação visual
+- Análise com e sem PCA 
 
-Os modelos foram avaliados visualmente e pela separabilidade dos clusters gerados.
+
 
 ---
 
-4. Visualização dos resultados
+5. Resultados obtidos
 
-Gráficos em 2D e 3D após PCA
-
-Comparação entre clusters e tipos de vinho
-
----
-
-## Resultados
-
-Padrões identificados entre os componentes químicos dos vinhos
-
-Agrupamentos coerentes com propriedades físico-químicas
-
-Demonstração prática de clustering e redução de dimensionalidade
+PCA + Meanshift (Melhor Configuração)
+- 4 Clusters bem definidos
+- Métricas Robustas
+  - Silhouette: 0.50
+  - Calinski: Muito elevado
+  - Davies-Bouldin: 0.80
+- Separação visual excelente
+Conclusões gerais
+- A redução por PCA tornou os clusters mais separados, especial para K-Means e MeanShift
+- DBSCAN foi útil para entender densidades, mas exigiu parametrização cuidadosa.
+- MeanShift se destacou ao oferecer agrupamentos estáveis sem necessidade de definir k
+- K-Means apresentou uma boa perfomace para k = 3, alinhado visualmente com a estrutura natural do dados. 
 
 ---
 
@@ -136,17 +181,19 @@ Clone o repositório:
 ```bash
 1. git clone https://github.com/Rd-Brito13/Projeto-WineChem
 
-2. Execute o script Setup.bat: (Ele criará o venv, instalará as dependências e registrará o kernel no Jupyter)
+2. Execute o script Setup.bat: (Ele criará o ambiente virtual, instalará as dependências e registrará o kernel no Jupyter)
 
-3. Abra o notebook no Jupyter e selecione o kernel criado: Kernel -> Change Kernel -> Python (WineChem)
+3. Abra o notebook no Jupyter e selecione o kernel criado: Kernel -> Change Kernel -> Python (WineChem-)
 
-4. Execute as células do notebook para reproduzir a análise.
+4. Execute o notebook normalmente.
 ```
 
 ---
-
+Utilizando Google Colab (Opção 2)
+- Faça o upload do notebook e dataset
+- Ajuste o caminho do arquivo e instale as depedências, se necessário.
+---
 ## Autor
-
 ---
 **Rodrigo Brito**
 
